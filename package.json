@@ -1,0 +1,19 @@
+{
+  "name": "social-network-api",
+  "version": "1.0.0",
+  "description": "Express.js for routing, a MongoDB database, and the Mongoose ODM.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShahnazAfreen9849/social-network-API.git"
+  },
+  "author": "Shahnaz Afreen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShahnazAfreen9849/social-network-API/issues"
+  },
+  "homepage": "https://github.com/ShahnazAfreen9849/social-network-API#readme"
+}
