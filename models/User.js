@@ -1,8 +1,8 @@
 const { Schema, model } = require('mongoose');
-const assignmentSchema = require('./Assignment');
+const reactionSchema = require('./Reaction');
 
-// Schema to create Student model
-const studentSchema = new Schema(
+
+const userSchema = new Schema(
   {
     username: {
       type: String,
@@ -37,7 +37,13 @@ const studentSchema = new Schema(
     },
   }
 );
+userSchema
+  .virtual('friendCount')
+  // Getter
+  .get(function () {
+    return this.friends.length;
+  })
 
-const Student = model('student', studentSchema);
+const User = model('user', userSchema);
 
-module.exports = Student;
+module.exports = User;
