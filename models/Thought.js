@@ -1,6 +1,7 @@
 const { Schema, model } = require('mongoose');
+import reactionSchema   from './Reaction';
 
-// Schema to create a course model
+// Schema to create a course model  
 const thoughtSchema = new Schema(
   {
     thoughtText: {
@@ -21,12 +22,7 @@ const thoughtSchema = new Schema(
       required: true,
     },
 
-    reactions: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'reactionSchema',
-      },
-    ],
+    reactions: [reactionSchema],
   },
 
   {
@@ -42,7 +38,7 @@ thoughtSchema
   // Getter
   .get(function () {
     return this.reactions.length;
-  })
+  }) 
 
 
 
